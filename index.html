@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock-PaperScissors</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rock-Paper-Scissors</h1>
+        <div class="choices">
+            <label>
+                <input name="rps-game" type="radio" value="rock"/>
+                <img src="https://i.imgur.com/W5TfSf1.png" alt="Rock">
+            </label>
+            <label>
+                <input name="rps-game" type="radio" value="paper"/>
+                <img src="https://i.imgur.com/uCYuHSX.png" alt="Paper">
+            </label>
+            <label>
+                <input name="rps-game" type="radio" value="scissors" />
+                <img src="https://i.imgur.com/uNa201T.png" alt="Scissors">
+            </label>
+            <button id="play-rps">Play</button>
+        </div>
+        <hr>
+        <div class="computer-choice">
+           <img id="rps-computer-choice" src="https://i.ytimg.com/vi/uLyPn9KW8iM/0.jpg" />
+        </div>
+        <div class="game-state">
+            <p><span id="result-message"></span></p>
+            <p>Wins: <span id="wins">0</span>
+            Total Games: <span id="total-games">0</span>
+            Times Reset: <span id="reset-counter">0</span></p>
+        </div>
+        <div class="game-reset">
+            <button id="reset-rps">Reset?</button>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
