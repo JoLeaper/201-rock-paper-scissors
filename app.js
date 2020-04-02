@@ -59,7 +59,4 @@ resetButton.addEventListener('click', () => {
     totalGames.textContent = '0';
     numResets++;
     resetCounter.textContent = numResets;
-
-
-
 });
