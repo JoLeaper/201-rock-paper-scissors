@@ -21,14 +21,19 @@ let numResets = 0;
 
 
 playButton.addEventListener('click', () => {
+
     const userChoice = document.querySelector('input:checked');
     computerChoice.style.visibility = 'visible';
+
     if (userChoice === null){
         resultMessage.textContent = 'What, don\'t you know you have to pick one to play?';
+        computerChoice.src = 'https://i.ytimg.com/vi/uLyPn9KW8iM/0.jpg';
         return;
     }
+
     let playerThrow = userChoice.value;
     let computerThrow = getRandomThrow();
+
     if (computerThrow === 'rock') {
         computerChoice.src = 'https://i.imgur.com/W5TfSf1.png';
     } else if (computerThrow === 'paper') {
@@ -36,7 +41,9 @@ playButton.addEventListener('click', () => {
     } else {
         computerChoice.src = 'https://i.imgur.com/uNa201T.png';
     }
+
     let gameResult = checkResult(playerThrow, computerThrow);
+
     if (gameResult === 'win'){
         resultMessage.textContent = 'Nice job, you won!';
         userWins++;
@@ -45,6 +52,7 @@ playButton.addEventListener('click', () => {
     } else {
         resultMessage.textContent = 'Better luck next time!'; 
     }
+
     gamesPlayed++;
     numWins.textContent = userWins;
     totalGames.textContent = gamesPlayed;
@@ -59,4 +67,5 @@ resetButton.addEventListener('click', () => {
     totalGames.textContent = '0';
     numResets++;
     resetCounter.textContent = numResets;
+    computerChoice.style.visibility = '';
 });
